@@ -23,8 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## groups_usersテーブル
-
+## membersテーブル
 |Column|Type|Option|
 |------|----|------|
 |user_id|integer|null: false,foreign_key: true|
@@ -33,3 +32,23 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## usersテーブル
+|Column|Type|Option|
+|------|----|------|
+|name|string|index:true, null: false, unique: true|
+|mail|string|null: false|
+
+### Association
+- has_many :groups, through: members
+- has_many :messages
+- has_many :members
+
+## messageテーブル
+|Column|Type|Option|
+|------|----|------|
+|text|text|null: false|
+
+### Association
+- belongs_to :groups, through: members
+- belongs_to :users
