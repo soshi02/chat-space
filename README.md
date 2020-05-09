@@ -47,12 +47,13 @@ Things you may want to cover:
 ## messageテーブル
 |Column|Type|Option|
 |------|----|------|
-|text|text|null: false|
+|text|text||
+|image|image||
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false,foreign_key: true|
 
 ### Association
-- belongs_to :group, through: members
+- belongs_to :group
 - belongs_to :user
 
 ## groupsテーブル
