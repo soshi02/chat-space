@@ -61,6 +61,6 @@ Things you may want to cover:
 
 
 ### Association
-- belongs_to :users, through: members
+- has_many :users, through: members
 - has_many :messages
 - has_many :members
