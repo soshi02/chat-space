@@ -48,16 +48,17 @@ Things you may want to cover:
 |Column|Type|Option|
 |------|----|------|
 |text|text|null: false|
+|user_id|integer|null: false,foreign_key: true|
+|group_id|integer|null: false,foreign_key: true|
 
 ### Association
-- belongs_to :groups, through: members
-- belongs_to :users
+- belongs_to :group, through: members
+- belongs_to :user
 
-## Groupテーブル
+## groupsテーブル
 |Column|Type|Option|
 |------|----|------|
 |name|string|index:true, null: false, unique: true|
-|user_id|integer|null: false,foreign_key: true|
 
 
 ### Association
