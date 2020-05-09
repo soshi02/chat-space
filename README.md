@@ -52,3 +52,15 @@ Things you may want to cover:
 ### Association
 - belongs_to :groups, through: members
 - belongs_to :users
+
+## Groupテーブル
+|Column|Type|Option|
+|------|----|------|
+|name|string|index:true, null: false, unique: true|
+|user_id|integer|null: false,foreign_key: true|
+
+
+### Association
+- belongs_to :users, through: members
+- has_many :messages
+- has_many :members
