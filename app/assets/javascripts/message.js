@@ -8,7 +8,7 @@ $(function() {
               ${message.user_name}
             </div>
             <div class ="chat-main__message-list__box__date">
-              ${message.create_at}
+              ${message.created_at}
             </div>
           </div>
           <div class ="chat-main__message-list__box__text">
@@ -25,7 +25,7 @@ $(function() {
             ${message.user_name}
           </div>
           <div class ="chat-main__message-list__box__date">
-            ${message.create_at}
+            ${message.created_at}
           </div>
         </div>
         <div class ="chat-main__message-list__box__text">
@@ -55,7 +55,7 @@ $(function() {
       $("form")[0].reset();
     })
     .fail(function() {
-      alert("メッセージを送信しました");
+      alert("メッセージを送信に失敗しました");
     });
   });
 });
