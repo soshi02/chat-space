@@ -13,7 +13,9 @@ $(function() {
             </div>
           </div>
           <div class ="chat-main__message-list__box__text">
+            <p class = "lower-message__content">
               ${message.content}
+            </p>
             <img src=${message.image}
           </div>
         </div>`
@@ -30,7 +32,9 @@ $(function() {
           </div>
         </div>
         <div class ="chat-main__message-list__box__text">
+          <p class = "lower-message__content">
             ${message.content}
+          </p>
         </div>
       </div>`
       return html;
